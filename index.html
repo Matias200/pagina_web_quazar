@@ -9,21 +9,28 @@
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<title>Quazar S.R.L.</title>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script>
+		var scroll = new SmoothScroll('a[href*="#"]', {
+	// Function. Custom easing pattern
+	// If this is set to anything other than null, will override the easing option above
+	customEasing: function (time) {
+
+		// return <your formulate with time as a multiplier>
+
+		// Example: easeInOut Quad
+		return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+
+	}
+});
+	</script>
 </head>
 <body>
   <header class="cabeza">
     <nav>
-       <a href="#">Inicio</a>
-       <a href="about.html">Acerca de</a>
-       <a href="#">Portafolio</a>
-       <a href="#">Servicios</a>
-       <a href="#">Contacto</a>
-       <!--
-		   A implementar más adelante: botón de función modo oscuro de la página web
-		<button class="switch" id="switch">
-         <span><i class="fas fa-sun"></i></span>
-         <span><i class="fas fa-moon"></i></span>
-	   </button>-->
+       <a data-scroll="" href="#sec1">Sobre Nosotros</a>
+       <a data-scroll="" href="#sec2">Catálogo</a>
+       <a data-scroll="" href="#sec3">Contacto</a>
    </nav>
    <section class="textos-header">
        <h1></h1>
@@ -39,9 +46,9 @@
 
 
     <main>
-      <section class="contenedor sobre-nosotros">
+      <section class="contenedor sobre-nosotros" id="sec1">
             <h2 class="titulo">Sobre Nosotros</h2>
-            <div class="contenedor-sobre-nosotros">
+            <div class="contenedor-sobre-nosotros" >
                 <img src="img/printer.png" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                   <h3><span>1</span>Nuestro Inicio</h3>
@@ -62,7 +69,7 @@
 
 
 
-        <section class="catalogo">
+        <section class="catalogo" id="sec2">
           <h2 class="titulo">Catálogo de Productos</h2>
           <form action="">
     				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
@@ -176,6 +183,7 @@
     					<img src="img/mug/mug9.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="tazas"
     				 data-etiquetas="tazas mugs magica magic feliz cumpleaños happy birthday"
@@ -185,6 +193,7 @@
     					<img src="img/mug/mug10.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="tazas"
     				 data-etiquetas="tazas mugs magica magic"
@@ -194,6 +203,7 @@
     					<img src="img/mug/mug11.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="tazas"
     				 data-etiquetas="tazas mugs magica magic"
@@ -203,6 +213,7 @@
     					<img src="img/mug/mug12.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="tazas"
     				 data-etiquetas="tazas mugs feliz cumpleaños happy birthday"
@@ -212,6 +223,7 @@
     					<img src="img/mug/mug13.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="chopp"
     				 data-etiquetas="choppera"
@@ -221,6 +233,7 @@
     					<img src="img/chopp/chopp1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="hoppies"
     				 data-etiquetas="hoppy"
@@ -230,6 +243,7 @@
     					<img src="img/hoppy/hoppy1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="hoppies"
     				 data-etiquetas="hoppy termo tazas mugs thermos"
@@ -239,6 +253,7 @@
     					<img src="img/hoppy/hoppy2.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="hoppies"
     				 data-etiquetas="hoppy"
@@ -248,6 +263,7 @@
     					<img src="img/hoppy/hoppy3.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="materos"
     				 data-etiquetas="materos magico magic"
@@ -257,6 +273,7 @@
     					<img src="img/matero/matero1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="materos"
     				 data-etiquetas="materos"
@@ -266,6 +283,7 @@
     					<img src="img/matero/matero2.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="almohadas"
     				 data-etiquetas="naturaleza hojas plantas"
@@ -275,6 +293,17 @@
     					<img src="img/pillow/pillow1.png" alt="">
     				</div>
 				</div>
+
+				<div class="item"
+    				 data-categoria="almohadas"
+    				 data-etiquetas="naturaleza hojas plantas"
+    				 data-descripcion="Almohada con Lentejuelas Personalizada."
+    			>
+    				<div class="item-contenido">
+    					<img src="img/pillow/pillow2.png" alt="">
+    				</div>
+				</div>
+
 				<div class="item"
     				 data-categoria="llaveros"
     				 data-etiquetas="llaveros keychain"
@@ -284,6 +313,7 @@
     					<img src="img/pin/llavero1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="pines"
     				 data-etiquetas="pines iman magnet"
@@ -293,6 +323,7 @@
     					<img src="img/pin/pin1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="pines"
     				 data-etiquetas="pines llavero keychain"
@@ -302,6 +333,7 @@
     					<img src="img/pin/pin2.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="pines"
     				 data-etiquetas="pines abridor opener"
@@ -311,6 +343,7 @@
     					<img src="img/pin/pin3.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="pines"
     				 data-etiquetas="pines prendedor"
@@ -320,6 +353,7 @@
     					<img src="img/pin/pin4.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="rompecabezas"
     				 data-etiquetas="rompecabezas puzzle"
@@ -329,6 +363,7 @@
     					<img src="img/puzzle/puzzle1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="rocas"
     				 data-etiquetas="rocas rock"
@@ -338,6 +373,7 @@
     					<img src="img/roca/rock1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="rocas"
     				 data-etiquetas="rocas rock"
@@ -347,6 +383,7 @@
     					<img src="img/roca/rock2.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals automaticos"
@@ -356,6 +393,7 @@
     					<img src="img/sellos/automaticos/sello1.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals automaticos"
@@ -365,6 +403,7 @@
     					<img src="img/sellos/automaticos/sello2.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals automaticos"
@@ -374,6 +413,7 @@
     					<img src="img/sellos/automaticos/sello3.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals automaticos"
@@ -383,6 +423,7 @@
     					<img src="img/sellos/automaticos/sello4.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals automaticos"
@@ -392,6 +433,7 @@
     					<img src="img/sellos/automaticos/sello5.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common"
@@ -401,6 +443,7 @@
     					<img src="img/sellos/comunes/sello6.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common ovalo oval"
@@ -410,6 +453,7 @@
     					<img src="img/sellos/comunes/sello7.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common"
@@ -419,6 +463,7 @@
     					<img src="img/sellos/comunes/sello8.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common"
@@ -428,6 +473,7 @@
     					<img src="img/sellos/comunes/sello9.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common"
@@ -437,6 +483,7 @@
     					<img src="img/sellos/comunes/sello10.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals comunes common"
@@ -446,6 +493,7 @@
     					<img src="img/sellos/comunes/sello11.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals fechero date"
@@ -455,6 +503,7 @@
     					<img src="img/sellos/fecheros/sello12.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals fechero date"
@@ -464,6 +513,7 @@
     					<img src="img/sellos/fecheros/sello13.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals mouse"
@@ -473,6 +523,7 @@
     					<img src="img/sellos/mouse/sello14.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals mouse"
@@ -482,6 +533,7 @@
     					<img src="img/sellos/mouse/sello15.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals bolsillo pocket"
@@ -491,6 +543,7 @@
     					<img src="img/sellos/de bolsillo/sello16.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals bolsillo pocket"
@@ -500,6 +553,7 @@
     					<img src="img/sellos/de bolsillo/sello17.png" alt="">
     				</div>
 				</div>
+
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals almohadilla pad"
@@ -509,6 +563,7 @@
     					<img src="img/sellos/almohadilla/almohadilla.png" alt="">
     				</div>
 				</div>
+				
 				<div class="item"
     				 data-categoria="sellos"
     				 data-etiquetas="sellos stamp seals tinta ink"
@@ -534,7 +589,7 @@
 
 
 
-		<footer class="contenedor">
+		<footer class="contenedor" id="sec3">
 			<h2 class="titulo">Dirección:</h2>
 			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1490.2019177359107!2d-55.86669978459233!3d-27.33454236739975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9b7722f9cfbef6d1!2sQuazar%20S.R.L!5e0!3m2!1ses-419!2spy!4v1588012655391!5m2!1ses-419!2spy" 
 			width="900" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -564,5 +619,6 @@
 	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
 	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
 	<script src="js/main.js"></script>
+	
 </body>
 </html>
