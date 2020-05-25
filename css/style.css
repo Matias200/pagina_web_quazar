@@ -314,9 +314,9 @@ footer .creado-por {
 footer .creado-por a {color: #fff;}
 footer .creado-por a:hover {text-decoration: underline;}
 
-/* ------------------------- */
-/* Mediaqueries */
-/* ------------------------- */
+
+
+
 @media screen and (max-width: 700px) {
 	.grid .item {
 		width: calc(50% - 20px);
@@ -325,6 +325,9 @@ footer .creado-por a:hover {text-decoration: underline;}
 	header .barra-busqueda {
 		width: 100%;
 	}
+	img{
+		vertical-align: top;
+	  }
 }
 
 @media screen and (max-width:900px){
