@@ -327,6 +327,10 @@ footer .creado-por a:hover {text-decoration: underline;}
 	}
 	img{
 		vertical-align: top;
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		width: 80%;
 	  }
 }
 
